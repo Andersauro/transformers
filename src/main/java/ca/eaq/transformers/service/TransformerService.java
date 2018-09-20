@@ -11,6 +11,7 @@ import ca.eaq.transformers.dao.TransformerDAO;
 import ca.eaq.transformers.models.BattleField;
 import ca.eaq.transformers.models.BattleSummary;
 import ca.eaq.transformers.models.Transformer;
+import ca.eaq.transformers.models.UrlInfo;
 
 @Service
 public class TransformerService {
@@ -21,6 +22,10 @@ public class TransformerService {
 	@Autowired
 	TransformerDAO tDao;
 
+	public UrlInfo getUrls(){
+		return new UrlInfo();
+	}
+	
 	public List<Transformer> listTransformers() {
 		return tDao.findTransformers();
 	}

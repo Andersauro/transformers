@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import ca.eaq.transformers.models.BattleSummary;
 import ca.eaq.transformers.models.ResponseObj;
 import ca.eaq.transformers.models.Transformer;
+import ca.eaq.transformers.models.UrlInfo;
 import ca.eaq.transformers.service.TransformerService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -25,6 +26,12 @@ public class TransformersController {
 
 	@Autowired
 	TransformerService service;
+	
+	@RequestMapping(value = "")
+    @ApiOperation("Returns list of all transformers in the system.")
+	public UrlInfo showUrls() {
+		return service.getUrls();
+	}
 
 	@RequestMapping(value = "/transformers")
     @ApiOperation("Returns list of all transformers in the system.")
