@@ -13,7 +13,7 @@ public class TransformersCRUDTest {
 
 	@After
 	public void testDelete() throws JSONException {
-		RestAssured.delete("/transformer/bumblebee").andReturn().then().statusCode(200);
+		RestAssured.delete("/transformers/bumblebee").andReturn().then().statusCode(200);
 	}
 
 	@Before
@@ -21,7 +21,7 @@ public class TransformersCRUDTest {
 		TransformerSpecs specs = new TransformerSpecs("A", 3, 3, 3, 3, 3, 3, 3, 3);
 		Transformer transformer = new Transformer("bumblebee", specs);
 		
-		RestAssured.given().contentType("application/json").body(transformer).when().post("/transformer").then().statusCode(201);
+		RestAssured.given().contentType("application/json").body(transformer).when().post("/transformers").then().statusCode(201);
 				
 	}
 	
@@ -30,7 +30,7 @@ public class TransformersCRUDTest {
 		TransformerSpecs specs = new TransformerSpecs("A", 5, 3, 3, 4, 3, 3, 3, 3);
 		Transformer transformer = new Transformer("A3", specs);
 		
-		RestAssured.given().contentType("application/json").body(transformer).when().put("/transformer").then().statusCode(200);
+		RestAssured.given().contentType("application/json").body(transformer).when().put("/transformers").then().statusCode(200);
 				
 	}
 	
@@ -55,7 +55,7 @@ public class TransformersCRUDTest {
 		TransformerSpecs specs = new TransformerSpecs("C", 5, 3, 3, 4, 3, 3, 3, 3);
 		Transformer transformer = new Transformer("A3", specs);
 		
-		RestAssured.given().contentType("application/json").body(transformer).when().put("/transformer").then().statusCode(400);
+		RestAssured.given().contentType("application/json").body(transformer).when().put("/transformers").then().statusCode(400);
 				
 	}
 	
@@ -67,7 +67,7 @@ public class TransformersCRUDTest {
 		TransformerSpecs specs = new TransformerSpecs("C", 5, 3, 3, 4, 3, 3, 3, 3);
 		Transformer transformer = new Transformer("A3", specs);
 		
-		RestAssured.given().contentType("application/json").body(transformer).when().put("/transformer").then().statusCode(400);
+		RestAssured.given().contentType("application/json").body(transformer).when().put("/transformers").then().statusCode(400);
 				
 	}
 	

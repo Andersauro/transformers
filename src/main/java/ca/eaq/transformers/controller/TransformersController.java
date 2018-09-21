@@ -39,7 +39,7 @@ public class TransformersController {
 		return service.listTransformers();
 	}
 
-	@RequestMapping(value = "/transformer", method = RequestMethod.POST)
+	@RequestMapping(value = "/transformers", method = RequestMethod.POST)
 	@ApiOperation("Creates a transformer.")
 	public ResponseEntity<?> addTransformer(@RequestBody Transformer transformer) {
 		try {
@@ -50,7 +50,7 @@ public class TransformersController {
 		return new ResponseEntity<>("", HttpStatus.CREATED);
 	}
 
-	@RequestMapping(value = "/transformer", method = RequestMethod.PUT)
+	@RequestMapping(value = "/transformers", method = RequestMethod.PUT)
 	@ApiOperation("Updates a transformers.")
 	public ResponseEntity<?> updateTransformer(@RequestBody Transformer transformer) {
 		try {
@@ -61,7 +61,7 @@ public class TransformersController {
 		return new ResponseEntity<>("", HttpStatus.OK);
 	}
 
-	@RequestMapping(value = "/transformer/{name}", method = RequestMethod.GET)
+	@RequestMapping(value = "/transformers/{name}", method = RequestMethod.GET)
 	@ApiOperation("Returns a transformer.")
 	public ResponseEntity<?> findTransformer(@PathVariable String name) {
 		Transformer transformer = service.findTransformer(name.toUpperCase());
@@ -71,7 +71,7 @@ public class TransformersController {
 		return new ResponseEntity<Transformer>(transformer, HttpStatus.OK);
 	}
 
-	@RequestMapping(value = "transformer/{name}", method = RequestMethod.DELETE)
+	@RequestMapping(value = "transformers/{name}", method = RequestMethod.DELETE)
 	@ApiOperation("Deletes a transformer.")
 	public ResponseEntity<?> removeTransformer(@PathVariable String name) {
 		try {
