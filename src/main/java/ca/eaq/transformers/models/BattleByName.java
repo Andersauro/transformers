@@ -2,7 +2,7 @@ package ca.eaq.transformers.models;
 
 public class BattleByName implements Battle{
 
-	private final String OPTIMUS = "OPTIMUS PRIME";
+	private final String OPTIMUS = "OPTIMUSPRIME";
 	private final String PREDAKING = "PREDAKING";
 	
 	@Override
