@@ -8,11 +8,11 @@ Spring boot application, run Configuration.java file
 I've add the swagger docs: /swagger-ui.html#/
      
 # Urls
-GET] http://aeq.com/api/transformers (returns all transformers)
-<br>[GET] http://aeq.com/api/transformer/{id} (returns a transformer with {id})
-<br>[POST] http://aeq.com/api/transformer (create new transformer)
-<br>[PUT] http://aeq.com/api/transformer/ (update transformer)
-<br>[DELETE] http://aeq.com/api/transformer/1 (delete transformer with {id})
+GET] http://aeq.com/api/transformers/ (returns all transformers)
+<br>[GET] http://aeq.com/api/transformers/{id}/ (returns a transformer with {id})
+<br>[POST] http://aeq.com/api/transformers/ (create new transformer)
+<br>[PUT] http://aeq.com/api/transformers/ (update transformer)
+<br>[DELETE] http://aeq.com/api/transformers/1/ (delete transformer with {id})
 
 # Assumptions:
   <li>I'm returning the name of the survivers of the winning team as well. 
